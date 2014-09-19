@@ -1,0 +1,17 @@
+{
+  "name": "metalsmith-katex",
+  "description": "A Metalsmith plugin to render TeX math using KaTeX",
+  "repository": "git://github.com/senshu/metalsmith-katex.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "debug": "^2.0.0",
+    "katex": "^0.1.0"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "metalsmith": "^0.11.0",
+    "mocha": "^1.21.4"
+  }
+}
