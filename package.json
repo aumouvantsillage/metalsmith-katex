@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-katex",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Metalsmith plugin to render TeX math using KaTeX",
   "author": "Guillaume Savaton",
   "repository": "git://github.com/senshu/metalsmith-katex.git",
