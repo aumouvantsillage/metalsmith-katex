@@ -7,7 +7,9 @@ var katex = require("..");
 describe("metalsmith-katex", function () {
     it("should convert TeX formulas with default delimiter", function (done) {
         Metalsmith("test/fixtures/default")
-            .use(katex())
+            .use(katex({
+                displayMode: true
+            }))
             .build(function (err, files) {
                 if (err) return done(err);
                 equal('test/fixtures/default/expected', 'test/fixtures/default/build');
@@ -19,7 +21,8 @@ describe("metalsmith-katex", function () {
         Metalsmith("test/fixtures/same-delimiter")
             .use(katex({
 				startDelimiter: "$",
-				endDelimiter: "$"
+				endDelimiter: "$",
+                displayMode: true
 			}))
             .build(function (err, files) {
                 if (err) return done(err);

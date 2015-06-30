@@ -8,11 +8,14 @@
   "main": "lib/index.js",
   "dependencies": {
     "debug": "^2.0.0",
-    "katex": "^0.1.0"
+    "katex": "^0.4.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
-    "metalsmith": "^0.11.0",
-    "mocha": "^1.21.4"
+    "metalsmith": "^1.0.0",
+    "mocha": "^2.0.0"
+  },
+  "scripts": {
+      "test": "./node_modules/mocha/bin/mocha test/index.js"
   }
 }
