@@ -20,10 +20,11 @@ Example:
 The hypotenuse is computed like this: <tex>c = \sqrt{a^2 + b^2}</tex>.
 ```
 
-This plugin supports two options:
+This plugin supports the following options:
 
 * ``startDelimiter`` (string): the delimiter to open a new formula.
 * ``endDelimiter`` (string): the delimiter to close the current formula.
+* Other options are passed to KaTeX.
 
 For instance, if you want to delimit your formulas between ``$``s,
 you can configure this plugin as follows:
@@ -67,3 +68,8 @@ of the stylesheet. This can be useful if a page contains formulas extracted from
 
 You can download KaTeX from [their official website](https://khan.github.io/KaTeX/)
 and copy the file ``katex.min.css`` to the appropriate location in your project tree.
+You can also install it using [bower](http://bower.io):
+
+```
+bower install katex
+```
