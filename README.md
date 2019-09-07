@@ -3,6 +3,41 @@ metalsmith-katex
 
 A Metalsmith plugin to render TeX math using [KaTeX](https://khan.github.io/KaTeX/).
 
+Current status and alternatives
+-------------------------------
+
+This module is not maintained and there is no plan to update it.
+You are free to clone this repository and make any modification that you find appropriate.
+
+If you need KaTeX support in Metalsmith, another option is to use an alternative set of Metalsmith plugins.
+A working setup is based on the following modules:
+
+* [metalsmith-markdownit](https://github.com/mayo/metalsmith-markdownit) to use [markdown-it](https://github.com/markdown-it/markdown-it) as the Markdown processor in Metalsmith.
+* [markdown-it-math](https://github.com/runarberg/markdown-it-math), a markdown-it plugin to include math in Markdown.
+* katex as the math rendering backend for markdown-it-math.
+
+Here is an example `build.js`:
+
+```js
+var markdown = require("metalsmith-markdownit");
+var math = require("markdown-it-math");
+var katex = require("katex");
+
+var md = markdown("commonmark", { /* your options */ });
+md.parser.use(math, {
+    inlineRenderer: str => katex.renderToString(str),
+    blockRenderer: str => katex.renderToString(str, {displayMode: true});
+});
+
+Metalsmith(__dirname)
+    .use(md)
+    .build(err => {
+        if (err) throw err;
+    });
+```
+
+If you still want to use `metalsmith-katex`, follow the instructions below:
+
 Installation
 ------------
 
